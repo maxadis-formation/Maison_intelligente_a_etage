@@ -1,0 +1,15 @@
+1- Le nom du groupe / Projet
+
+Projet n°12 — Centrale Domotique d'Éclairage avec Fonction Minuterie Temporisée
+
+2- Description de la maquette réalisée
+
+Maison intelligente à étage (éclairage intérieur) — Maquette sur deux niveaux avec pilotage indépendant des deux circuits 220V (Rez-de-chaussée et Étage) en mode ON/OFF et en mode Minuterie Temporisée (10 secondes) via Bluetooth.
+
+3- Les noms de tous les membres du groupe
+
+- HOUNMENOU Martial
+- AGBANRIN Ishola
+- HOUANSOU Régis A.
+
+4- La photo du projet et la documentation technique (Centre de Formation MAX_ADIS - Édition 2026)

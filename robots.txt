@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maxadis-domotique-eclairage.vercel.app/sitemap.xml

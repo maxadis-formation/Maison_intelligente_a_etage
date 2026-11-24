@@ -1,0 +1,2702 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth" itemscope itemtype="https://schema.org/TechArticle">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    
+    <!-- Google Search Console Vérification -->
+    <meta name="google-site-verification" content="9KnzAROV94kBgJhmhX6T69Rsx8S5ILjVK7eQ_0QUvH4" />
+    
+    <!-- Titre & SEO Référencement Google -->
+    <title>Centrale Domotique d'Éclairage avec Minuterie Temporisée | HOUNMENOU, AGBANRIN, HOUANSOU (Max_Adis)</title>
+    
+    <!-- Métadonnées & Moteurs de Recherche -->
+    <meta name="description" content="Site officiel et simulateur interactif de la Centrale Domotique d'Éclairage avec Fonction Minuterie Temporisée (Maison intelligente à étage sur deux niveaux) par HOUNMENOU Martial, AGBANRIN Ishola et HOUANSOU Régis A. (Centre de Formation Max_Adis Porto-Novo). Arduino Uno, 2 Relais 220V, Bluetooth HC-05 et MIT App Inventor.">
+    <meta name="author" content="HOUNMENOU Martial, AGBANRIN Ishola, HOUANSOU Régis A. — Projet n°12 - Max_Adis">
+    <meta name="keywords" content="HOUNMENOU Martial, AGBANRIN Ishola, HOUANSOU Régis A., Max_Adis, Centrale Domotique d'Éclairage, Minuterie Temporisée, Maison intelligente à étage, Formation Max_Adis 2026, Porto-Novo, Bénin, Arduino Uno, Relais 220V, HC-05, HC-06, MIT App Inventor, IoT, Domotique, Éclairage intérieur">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="geo.region" content="BJ">
+    <meta name="geo.placename" content="Porto-Novo">
+    <link rel="canonical" href="https://maxadis-domotique-eclairage.vercel.app/">
+    
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:site_name" content="DomoLight Timer BT — Max_Adis Formation">
+    <meta property="og:title" content="Centrale Domotique d'Éclairage avec Fonction Minuterie Temporisée (Maison à Étage)">
+    <meta property="og:description" content="Pilotage sans fil Bluetooth de l'éclairage intérieur sur deux niveaux (Rez-de-chaussée & Étage) avec minuterie automatique 10s. Réalisé par HOUNMENOU Martial, AGBANRIN Ishola et HOUANSOU Régis A.">
+    <meta property="og:url" content="https://maxadis-domotique-eclairage.vercel.app/">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:image" content="https://maxadis-domotique-eclairage.vercel.app/assets/vu_exterieur.jpeg">
+    <meta property="og:image:alt" content="Maquette Maison Intelligente à Étage - Centrale Domotique d'Éclairage avec Minuterie">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Centrale Domotique d'Éclairage avec Minuterie Temporisée">
+    <meta name="twitter:description" content="Maison intelligente à étage (éclairage intérieur sur deux niveaux) commandée par Bluetooth. Max_Adis 2026.">
+    <meta name="twitter:image" content="https://maxadis-domotique-eclairage.vercel.app/assets/vu_exterieur.jpeg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+    <link rel="apple-touch-icon" href="assets/logo.jpg">
+
+    <!-- Données Structurées JSON-LD pour Indexation Google Instantanée -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://maxadis-domotique-eclairage.vercel.app/#article",
+          "headline": "Centrale Domotique d'Éclairage avec Fonction Minuterie Temporisée — Maison Intelligente à Étage",
+          "name": "Centrale Domotique d'Éclairage avec Fonction Minuterie Temporisée (Maquette sur deux niveaux)",
+          "description": "Projet de centrale domotique d'éclairage intérieur sur deux niveaux avec Arduino Uno, 2 modules relais 220V, module Bluetooth HC-05/HC-06 et application mobile Android développée sous MIT App Inventor.",
+          "inLanguage": "fr-FR",
+          "url": "https://maxadis-domotique-eclairage.vercel.app/",
+          "image": "https://maxadis-domotique-eclairage.vercel.app/assets/vu_exterieur.jpeg",
+          "datePublished": "2026-09-01T08:00:00+01:00",
+          "dateModified": "2026-11-24T12:00:00+01:00",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "HOUNMENOU Martial",
+              "jobTitle": "Concepteur & Développeur Système Embarqué",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Centre de Formation Max_Adis",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Porto-Novo",
+                  "addressCountry": "BJ"
+                }
+              }
+            },
+            {
+              "@type": "Person",
+              "name": "AGBANRIN Ishola",
+              "jobTitle": "Concepteur & Intégrateur Domotique",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Centre de Formation Max_Adis",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Porto-Novo",
+                  "addressCountry": "BJ"
+                }
+              }
+            },
+            {
+              "@type": "Person",
+              "name": "HOUANSOU Régis A.",
+              "jobTitle": "Concepteur & Développeur Application Mobile",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Centre de Formation Max_Adis",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Porto-Novo",
+                  "addressCountry": "BJ"
+                }
+              }
+            }
+          ],
+          "publisher": {
+            "@type": "EducationalOrganization",
+            "name": "Centre de Formation Max_Adis",
+            "url": "https://maxadis-domotique-eclairage.vercel.app/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://maxadis-domotique-eclairage.vercel.app/assets/logo.jpg"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Porto-Novo",
+              "addressCountry": "Bénin"
+            }
+          },
+          "keywords": "HOUNMENOU Martial, AGBANRIN Ishola, HOUANSOU Régis A., Max_Adis, Centrale Domotique d'Éclairage, Minuterie Temporisée, Maison intelligente à étage, Arduino Uno, Relais 220V, HC-05, MIT App Inventor, Porto-Novo, Bénin, IoT, Domotique"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Eclairage avec minuterie",
+          "operatingSystem": "Android",
+          "applicationCategory": "UtilitiesApplication",
+          "author": {
+            "@type": "Organization",
+            "name": "Projet n°12 (HOUNMENOU Martial, AGBANRIN Ishola, HOUANSOU Régis A.)"
+          }
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Centre de Formation Max_Adis",
+          "url": "https://maxadis-domotique-eclairage.vercel.app/",
+          "email": "maxadisorg@gmail.com",
+          "telephone": "+2290154116425",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto-Novo",
+            "addressCountry": "Bénin"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Qui a conçu et réalisé la Centrale Domotique d'Éclairage avec Fonction Minuterie Temporisée ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le système et la maquette de maison intelligente à étage ont été conçus, développés et réalisés par HOUNMENOU Martial, AGBANRIN Ishola et HOUANSOU Régis A. au Centre de Formation Professionnelle Max_Adis."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment fonctionne la minuterie temporisée sur les deux niveaux de la maison ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Depuis l'application mobile Android Eclairage avec minuterie, l'utilisateur peut soit allumer/éteindre manuellement chaque étage (ON1/OFF1 pour le rez-de-chaussée, ON2/OFF2 pour l'étage), soit activer Minuterie 1 (trame T) ou Minuterie 2 (trame U) qui allume la lampe correspondante pendant 10 secondes avant de l'éteindre automatiquement."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Dans quel centre de formation ce projet a-t-il été développé ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ce projet a été réalisé au Centre de Formation Professionnelle Max_Adis, situé à Porto-Novo, Bénin, dans le cadre de la formation en Systèmes Embarqués, Domotique, Électronique et Internet des Objets (IoT) - Édition 2026."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Puis-je recevoir de l'aide ou un accompagnement pour la réalisation d'un projet similaire ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, absolument ! Le Centre de Formation Professionnelle Max_Adis accompagne les étudiants, passionnés et professionnels dans la conception, le prototypage et la réalisation complète de leurs projets en Domotique, Systèmes Embarqués, Électronique et IoT. Contactez le +229 01 54 11 64 25 ou maxadisorg@gmail.com."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Typographie Professionnelle Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            /* Palette Dérivée du Logo Max_Adis & Éclairage Domotique */
+            --primary-blue: #0072CE;
+            --primary-blue-hover: #005bb5;
+            --primary-blue-dark: #00458a;
+            --sky-blue: #38bdf8;
+            --sky-blue-light: #f0f9ff;
+            --sky-blue-border: #bae6fd;
+            
+            --thermal-orange: #F97316;
+            --thermal-orange-light: #fff7ed;
+            --thermal-orange-border: #fed7aa;
+
+            --bulb-gold: #eab308;
+            --bulb-gold-light: #fef9c3;
+            --emerald-green: #10b981;
+            
+            --bg-page: #f8fafc;
+            --bg-white: #ffffff;
+            --bg-soft: #f1f5f9;
+            
+            --text-title: #0f172a;
+            --text-body: #334155;
+            --text-muted: #64748b;
+            
+            --border-color: #e2e8f0;
+            --border-light: #f1f5f9;
+            
+            --shadow-subtle: 0 2px 6px rgba(0, 0, 0, 0.04);
+            --shadow-card: 0 10px 25px -5px rgba(2, 132, 199, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+            --shadow-card-hover: 0 20px 35px -8px rgba(0, 114, 206, 0.14), 0 10px 15px -3px rgba(0, 0, 0, 0.04);
+            --shadow-hero: 0 20px 40px -10px rgba(0, 114, 206, 0.16);
+            --shadow-dropdown: 0 20px 40px -10px rgba(15, 23, 42, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-body);
+            line-height: 1.65;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(249, 115, 22, 0.04) 0%, transparent 40%),
+                radial-gradient(circle at 50% 85%, rgba(0, 114, 206, 0.04) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text-title);
+            font-weight: 700;
+            line-height: 1.25;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* -------------------------------------------------------------
+           BARRE DE NAVIGATION : 3 ÉLÉMENTS ÉPURÉS & MENU MOBILE COMPLET
+        ------------------------------------------------------------- */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1100;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.85rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            text-decoration: none;
+            color: var(--text-title);
+            flex-shrink: 0;
+        }
+
+        .brand-logo img {
+            width: 42px;
+            height: 42px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid var(--primary-blue);
+            box-shadow: 0 4px 12px rgba(0, 114, 206, 0.16);
+            transition: transform 0.4s ease;
+        }
+
+        .brand-logo:hover img {
+            transform: scale(1.08);
+        }
+
+        .brand-text-wrap {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.22rem;
+            letter-spacing: -0.02em;
+            color: var(--text-title);
+            line-height: 1.15;
+        }
+
+        .brand-name span {
+            color: var(--primary-blue);
+        }
+
+        .brand-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* Hamburger Button */
+        .mobile-nav-toggle {
+            display: none;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            cursor: pointer;
+            padding: 0.55rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            z-index: 1200;
+            width: 40px;
+            height: 40px;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .hamburger-line {
+            display: block;
+            width: 20px;
+            height: 2.2px;
+            background: var(--text-title);
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-nav-toggle.open .hamburger-line:nth-child(1) {
+            transform: translateY(6.2px) rotate(45deg);
+            background: var(--primary-blue);
+        }
+
+        .mobile-nav-toggle.open .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-nav-toggle.open .hamburger-line:nth-child(3) {
+            transform: translateY(-6.2px) rotate(-45deg);
+            background: var(--primary-blue);
+        }
+
+        /* Mobile Backdrop */
+        .nav-backdrop {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(15, 23, 42, 0.45);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 1040;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-backdrop.open {
+            display: block;
+            opacity: 1;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-link-direct {
+            color: var(--text-body);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link-direct:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Menu Déroulant 3ème Élément */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-trigger {
+            background: transparent;
+            border: none;
+            font-family: inherit;
+            color: var(--text-body);
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            cursor: pointer;
+            padding: 0.4rem 0.2rem;
+            transition: color 0.2s ease;
+        }
+
+        .dropdown-trigger:hover, .nav-dropdown:hover .dropdown-trigger {
+            color: var(--primary-blue);
+        }
+
+        .dropdown-arrow {
+            transition: transform 0.25s ease;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: -80px;
+            width: 335px;
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 0.85rem;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-dropdown);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 1100;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            margin-top: 0.5rem;
+        }
+
+        .nav-dropdown:hover .dropdown-menu, .nav-dropdown:focus-within .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 0.65rem 0.85rem;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text-title);
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-item:hover {
+            background: var(--sky-blue-light);
+            transform: translateX(3px);
+        }
+
+        .dropdown-item-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: var(--bg-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            flex-shrink: 0;
+            transition: background 0.2s ease;
+        }
+
+        .dropdown-item:hover .dropdown-item-icon {
+            background: #ffffff;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .dropdown-item-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-title);
+            line-height: 1.2;
+        }
+
+        .dropdown-item-desc {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            margin-top: 0.15rem;
+        }
+
+        .dropdown-item.highlight {
+            background: var(--sky-blue-light);
+            border: 1px solid var(--sky-blue-border);
+            margin-top: 0.3rem;
+        }
+
+        .dropdown-item.highlight:hover {
+            background: #e0f2fe;
+        }
+
+        .btn-github {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            background: linear-gradient(135deg, var(--primary-blue), #0284c7);
+            color: #ffffff !important;
+            padding: 0.6rem 1.35rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(0, 114, 206, 0.22);
+            transition: all 0.25s ease;
+        }
+
+        .btn-github:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 114, 206, 0.32);
+            background: linear-gradient(135deg, var(--primary-blue-dark), var(--primary-blue));
+        }
+
+        /* -------------------------------------------------------------
+           HERO SECTION ÉPURÉE, AÉRÉE & DISTINCTE
+        ------------------------------------------------------------- */
+        .hero-section {
+            padding: 4.5rem 0 4.5rem 0;
+            position: relative;
+            background: linear-gradient(180deg, #f0f7ff 0%, #f8fafc 45%, #ffffff 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .hero-text-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-eyebrow {
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--primary-blue);
+            margin-bottom: 0.85rem;
+        }
+
+        .hero-title {
+            font-size: 3.05rem;
+            font-weight: 800;
+            letter-spacing: -0.035em;
+            color: var(--text-title);
+            margin-bottom: 1.25rem;
+            line-height: 1.15;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, var(--primary-blue), #0284c7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--text-body);
+            margin-bottom: 2.25rem;
+            line-height: 1.65;
+            max-width: 560px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.15rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-hero-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            background: linear-gradient(135deg, var(--primary-blue), #0284c7);
+            color: #ffffff;
+            padding: 0.95rem 1.85rem;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 0.98rem;
+            text-decoration: none;
+            box-shadow: 0 8px 22px rgba(0, 114, 206, 0.25);
+            transition: all 0.25s ease;
+        }
+
+        .btn-hero-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(0, 114, 206, 0.35);
+        }
+
+        .btn-hero-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            background: var(--bg-white);
+            color: var(--text-title);
+            border: 1px solid var(--border-color);
+            padding: 0.95rem 1.75rem;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 0.98rem;
+            text-decoration: none;
+            box-shadow: var(--shadow-subtle);
+            transition: all 0.25s ease;
+        }
+
+        .btn-hero-secondary:hover {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+            transform: translateY(-2px);
+        }
+
+        /* Showcase Image Hero Propre */
+        .hero-showcase {
+            position: relative;
+            width: 100%;
+        }
+
+        .hero-img-frame {
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 26px;
+            border: 1px solid var(--sky-blue-border);
+            box-shadow: var(--shadow-hero);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-img-frame:hover {
+            transform: translateY(-4px);
+        }
+
+        .hero-img-frame img {
+            width: 100%;
+            height: 410px;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+        }
+
+        /* -------------------------------------------------------------
+           BOUTON RETOUR EN HAUT FLOTTANT
+        ------------------------------------------------------------- */
+        .btn-scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 1.5px solid #0f172a;
+            color: #0f172a;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(15px);
+            transition: all 0.3s ease;
+        }
+
+        .btn-scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .btn-scroll-top:hover {
+            background: #0f172a;
+            color: #ffffff;
+            border-color: #0f172a;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* SECTIONS GÉNÉRALES */
+        section {
+            padding: 4.5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .section-tag {
+            display: inline-block;
+            color: var(--primary-blue);
+            font-weight: 800;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.4rem;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .bg-white-sec {
+            background: #ffffff;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        #presentation.bg-white-sec {
+            border-top: none;
+        }
+
+        /* 1. Problématique & Objectifs */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .card-box {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.25rem;
+            box-shadow: var(--shadow-card);
+        }
+
+        .bullet-list {
+            list-style: none;
+            margin-top: 1.25rem;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 1.75rem;
+            margin-bottom: 0.85rem;
+            color: var(--text-body);
+        }
+
+        .bullet-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--primary-blue);
+            font-weight: 800;
+        }
+
+        /* 2. Fonctionnement du Système */
+        .steps-flow-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .flow-step-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-subtle);
+            position: relative;
+            transition: all 0.25s ease;
+        }
+
+        .flow-step-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary-blue);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .flow-step-num {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--sky-blue));
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.85rem;
+        }
+
+        /* 3. Nomenclature Matérielle */
+        .hardware-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-card);
+            background: var(--bg-white);
+        }
+
+        .hardware-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-white);
+        }
+
+        .hardware-table th {
+            background: var(--sky-blue-light);
+            color: var(--primary-blue-dark);
+            padding: 1rem 1.25rem;
+            text-align: left;
+            font-size: 0.9rem;
+            font-weight: 700;
+            border-bottom: 1px solid var(--sky-blue-border);
+            white-space: nowrap;
+        }
+
+        .hardware-table td {
+            padding: 0.95rem 1.25rem;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.92rem;
+        }
+
+        .hardware-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* 4. Les Étapes de Réalisation */
+        .etapes-showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .etape-card-full {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
+        }
+
+        .etape-card-full:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary-blue);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .etape-img-wrap {
+            height: 260px;
+            overflow: hidden;
+            background: var(--bg-soft);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .etape-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .etape-card-full:hover .etape-img-wrap img {
+            transform: scale(1.05);
+        }
+
+        .etape-body {
+            padding: 1.75rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .etape-badge-num {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            background: var(--sky-blue-light);
+            border: 1px solid var(--sky-blue-border);
+            padding: 0.25rem 0.65rem;
+            border-radius: 6px;
+            margin-bottom: 0.75rem;
+            align-self: flex-start;
+        }
+
+        .etape-body h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* 5. SIMULATEUR INTERACTIF : MAISON INTELLIGENTE À ÉTAGE & MINUTERIE 10S */
+        .simulator-panel {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-card);
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .floor-control-card {
+            background: var(--bg-page);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.35rem 1.5rem;
+            transition: all 0.25s ease;
+        }
+
+        .floor-control-card.lit {
+            background: #fffbeb;
+            border-color: #fde047;
+            box-shadow: 0 8px 20px rgba(234, 179, 8, 0.12);
+        }
+
+        .floor-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .floor-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.08rem;
+            color: var(--text-title);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .floor-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 0.25rem 0.7rem;
+            border-radius: 999px;
+            background: #e2e8f0;
+            color: #475569;
+        }
+
+        .floor-badge.on {
+            background: #fef08a;
+            color: #854d0e;
+            border: 1px solid #facc15;
+        }
+
+        .floor-badge.timer {
+            background: var(--thermal-orange-light);
+            color: var(--thermal-orange);
+            border: 1px solid var(--thermal-orange-border);
+        }
+
+        .app-btn-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1.3fr;
+            gap: 0.75rem;
+        }
+
+        .btn-sim-cmd {
+            padding: 0.75rem 0.65rem;
+            border-radius: 11px;
+            font-weight: 800;
+            font-size: 0.86rem;
+            cursor: pointer;
+            border: 1.5px solid transparent;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            font-family: inherit;
+        }
+
+        .btn-sim-on {
+            background: #ecfdf5;
+            color: #047857;
+            border-color: #a7f3d0;
+        }
+
+        .btn-sim-on:hover {
+            background: #10b981;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .btn-sim-off {
+            background: #fef2f2;
+            color: #b91c1c;
+            border-color: #fecaca;
+        }
+
+        .btn-sim-off:hover {
+            background: #ef4444;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .btn-sim-timer {
+            background: var(--sky-blue-light);
+            color: var(--primary-blue);
+            border-color: var(--sky-blue-border);
+        }
+
+        .btn-sim-timer:hover {
+            background: var(--primary-blue);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Maquette Interactive Maison à 2 Niveaux */
+        .house-sim-box {
+            background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+            border: 2px solid #334155;
+            border-radius: 22px;
+            padding: 2rem 1.5rem 1.5rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            color: #ffffff;
+            box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .house-svg-wrap {
+            width: 240px;
+            height: 250px;
+            margin-bottom: 1.1rem;
+            position: relative;
+        }
+
+        .window-room {
+            transition: all 0.35s ease;
+        }
+
+        .window-room.lit-room {
+            fill: #fef08a !important;
+            filter: drop-shadow(0 0 14px rgba(250, 204, 21, 0.85));
+        }
+
+        .timer-bar-wrap {
+            width: 100%;
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 999px;
+            margin-top: 0.75rem;
+            overflow: hidden;
+            display: none;
+        }
+
+        .timer-bar-fill {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, var(--primary-blue), var(--thermal-orange));
+            transition: width 0.2s linear;
+        }
+
+        .telemetry-tag {
+            margin-top: 1rem;
+            width: 100%;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+            color: #38bdf8;
+            background: rgba(15, 23, 42, 0.85);
+            padding: 0.55rem 0.9rem;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            word-break: break-all;
+        }
+
+        /* 6. Section Participants & Équipe */
+        .team-section {
+            padding: 4.5rem 0;
+            background: var(--bg-page);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 2.25rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .team-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary-blue);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .avatar-box {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            margin: 0 auto 1.25rem auto;
+            background: linear-gradient(135deg, var(--primary-blue), #38bdf8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 1.35rem;
+            box-shadow: 0 8px 18px rgba(0, 114, 206, 0.25);
+            border: 3px solid #ffffff;
+        }
+
+        .team-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-title);
+            margin-bottom: 0.3rem;
+        }
+
+        .team-role {
+            font-size: 0.82rem;
+            color: var(--primary-blue);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .team-group {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.4rem;
+        }
+
+        /* 7. SECTION CONTACT, SUPPORT & ACCOMPAGNEMENT PROJETS */
+        .support-section {
+            padding: 4.5rem 0;
+            background: #ffffff;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.9fr 0.9fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .support-card {
+            background: var(--bg-page);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 1.85rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+
+        .support-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary-blue);
+            box-shadow: var(--shadow-card);
+        }
+
+        .support-card-head {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .support-icon-wrap {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--sky-blue-light);
+            border: 1px solid var(--sky-blue-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            flex-shrink: 0;
+        }
+
+        .support-card-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--text-title);
+        }
+
+        .support-body-text {
+            font-size: 0.92rem;
+            color: var(--text-body);
+            line-height: 1.65;
+            margin-bottom: 1rem;
+        }
+
+        .support-highlight-box {
+            background: var(--sky-blue-light);
+            border: 1px solid var(--sky-blue-border);
+            border-radius: 12px;
+            padding: 0.85rem 1rem;
+            font-size: 0.86rem;
+            color: var(--primary-blue-dark);
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .contact-links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin: 1rem 0;
+        }
+
+        .contact-link-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-title);
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 0.65rem 0.85rem;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            transition: all 0.2s ease;
+            word-break: break-word;
+        }
+
+        .contact-link-item:hover {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+            transform: translateX(4px);
+        }
+
+        .btn-card-github {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            background: #0f172a;
+            color: #ffffff;
+            padding: 0.85rem 1.4rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.25);
+            transition: all 0.25s ease;
+            margin-top: 1rem;
+        }
+
+        .btn-card-github:hover {
+            background: var(--primary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 114, 206, 0.35);
+        }
+
+        /* -------------------------------------------------------------
+           FAQ ACCORDÉON (STYLE OFFICIEL MAX_ADIS)
+        ------------------------------------------------------------- */
+        .faq-accordion-list {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+        }
+
+        .faq-accordion-item {
+            background: #ffffff;
+            border-radius: 18px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            overflow: hidden;
+            transition: all 0.25s ease;
+        }
+
+        .faq-accordion-item:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .faq-accordion-item.active {
+            border-color: #bfdbfe;
+            box-shadow: 0 8px 24px rgba(0, 114, 206, 0.09);
+        }
+
+        .faq-accordion-header {
+            width: 100%;
+            background: transparent;
+            border: none;
+            padding: 1.35rem 1.65rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.25rem;
+            text-align: left;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background-color 0.2s ease;
+        }
+
+        .faq-accordion-header:hover {
+            background: rgba(248, 250, 252, 0.7);
+        }
+
+        .faq-accordion-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1.4;
+            margin: 0;
+            flex: 1;
+        }
+
+        .faq-accordion-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            min-width: 32px;
+            font-size: 1.65rem;
+            font-weight: 600;
+            color: #dc2626;
+            line-height: 1;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            user-select: none;
+        }
+
+        .faq-accordion-item.active .faq-accordion-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+            opacity: 0;
+            padding: 0 1.65rem;
+        }
+
+        .faq-accordion-item.active .faq-accordion-content {
+            max-height: 500px;
+            opacity: 1;
+            padding: 0.1rem 1.65rem 1.5rem 1.65rem;
+        }
+
+        .faq-accordion-body {
+            font-size: 0.96rem;
+            color: #475569;
+            line-height: 1.7;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 1rem;
+        }
+
+        .faq-accordion-body a {
+            color: var(--primary-blue);
+            font-weight: 700;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #0b1329;
+            color: #ffffff;
+            padding: 2.5rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-text {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        .footer-sub {
+            color: #94a3b8;
+            font-size: 0.88rem;
+        }
+
+        /* -------------------------------------------------------------
+           RESPONSIVE BREAKPOINTS (1024px, 860px, 768px, 480px)
+        ------------------------------------------------------------- */
+        @media (max-width: 1024px) {
+            .hero-grid, .simulator-panel, .hardware-grid, .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .steps-flow-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .etapes-showcase-grid {
+                grid-template-columns: 1fr;
+            }
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+            .dropdown-menu {
+                right: 0;
+            }
+        }
+
+        @media (max-width: 860px) {
+            .mobile-nav-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                max-height: calc(100vh - 60px);
+                background: #ffffff;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 1.25rem 1.25rem 2.5rem 1.25rem;
+                gap: 0.75rem;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                transform: translateY(-120%);
+                opacity: 0;
+                visibility: hidden;
+                transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, visibility 0.3s ease;
+                border-bottom: 2px solid var(--sky-blue-border);
+                box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
+                z-index: 1150;
+            }
+
+            .nav-links.open {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-link-direct {
+                display: block;
+                font-size: 1.02rem;
+                padding: 0.9rem 1.15rem;
+                border-radius: 12px;
+                background: var(--bg-soft);
+                border: 1px solid var(--border-color);
+                font-weight: 700;
+                color: var(--text-title);
+            }
+
+            .dropdown-trigger {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 1.02rem;
+                padding: 0.9rem 1.15rem;
+                border-radius: 12px;
+                background: var(--sky-blue-light);
+                color: var(--primary-blue-dark);
+                border: 1px solid var(--sky-blue-border);
+                font-weight: 700;
+            }
+
+            .dropdown-menu {
+                position: static;
+                width: 100%;
+                box-shadow: none;
+                border: 1px solid var(--sky-blue-border);
+                background: #f8fafc;
+                border-radius: 14px;
+                padding: 0.6rem;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                margin-top: 0.5rem;
+                display: none;
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+
+            .nav-dropdown.active .dropdown-menu {
+                display: flex;
+            }
+
+            .dropdown-item {
+                background: #ffffff;
+                border: 1px solid var(--border-color);
+                padding: 0.7rem 0.85rem;
+                border-radius: 10px;
+            }
+
+            .btn-github {
+                justify-content: center;
+                width: 100%;
+                padding: 0.9rem 1.5rem;
+                font-size: 1rem;
+                border-radius: 12px;
+                margin-top: 0.4rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+
+            .container {
+                padding: 0 1.25rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            .hero-section {
+                padding: 2.75rem 0 4.5rem 0;
+                background: linear-gradient(180deg, #f0f7ff 0%, #f8fafc 50%, #ffffff 100%);
+            }
+
+            .hero-grid {
+                gap: 2.25rem;
+            }
+
+            .hero-text-col {
+                text-align: center;
+                align-items: center;
+            }
+
+            .hero-eyebrow {
+                display: inline-block;
+                font-size: 0.78rem;
+                font-weight: 800;
+                letter-spacing: 0.12em;
+                color: var(--primary-blue);
+                background: rgba(0, 114, 206, 0.08);
+                padding: 0.35rem 0.95rem;
+                border-radius: 999px;
+                margin-bottom: 1rem;
+            }
+
+            .hero-title {
+                font-size: 2.05rem;
+                line-height: 1.25;
+                letter-spacing: -0.025em;
+                margin-bottom: 1rem;
+                font-weight: 800;
+            }
+
+            .hero-subtitle {
+                font-size: 1.02rem;
+                line-height: 1.65;
+                color: var(--text-body);
+                margin-bottom: 2rem;
+                max-width: 520px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-actions {
+                display: none !important;
+            }
+
+            .hero-showcase {
+                width: 100%;
+            }
+
+            .hero-img-frame {
+                padding: 8px;
+                border-radius: 22px;
+                border: 1.5px solid var(--border-color);
+                box-shadow: 0 12px 30px rgba(0, 114, 206, 0.12);
+                background: #ffffff;
+            }
+
+            .hero-img-frame img {
+                height: auto;
+                max-height: 330px;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 16px;
+                display: block;
+            }
+
+            .section-header {
+                margin-bottom: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+                line-height: 1.25;
+            }
+
+            .card-box {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+
+            .steps-flow-grid {
+                grid-template-columns: 1fr;
+                gap: 0.85rem;
+            }
+
+            .flow-step-card {
+                padding: 1.25rem;
+            }
+
+            .hardware-table th, .hardware-table td {
+                padding: 0.75rem 0.85rem;
+                font-size: 0.85rem;
+            }
+
+            .etape-img-wrap {
+                height: 210px;
+            }
+
+            .etape-body {
+                padding: 1.25rem;
+            }
+
+            .etape-body h3 {
+                font-size: 1.2rem;
+            }
+
+            .simulator-panel {
+                padding: 1.5rem 1.2rem;
+                border-radius: 18px;
+                gap: 2rem;
+            }
+
+            .app-btn-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+
+            .team-card {
+                padding: 1.75rem 1.25rem;
+            }
+
+            .support-card {
+                padding: 1.5rem 1.25rem;
+            }
+
+            .btn-scroll-top {
+                bottom: 1.25rem;
+                right: 1.25rem;
+                width: 44px;
+                height: 44px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1.15rem;
+            }
+
+            .navbar {
+                padding: 0.7rem 0;
+            }
+
+            .brand-name {
+                font-size: 1.05rem;
+            }
+
+            .brand-logo img {
+                width: 38px;
+                height: 38px;
+            }
+
+            .hero-section {
+                padding: 2.25rem 0 4.25rem 0;
+            }
+
+            .hero-title {
+                font-size: 1.85rem;
+                line-height: 1.22;
+                margin-bottom: 0.95rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BOUTON REVENIR EN HAUT FLOTTANT -->
+    <button id="btnScrollTop" class="btn-scroll-top" onclick="scrollToTop()" title="Revenir en haut" aria-label="Revenir en haut">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <!-- FOND SOMBRE FLOU POUR MENU MOBILE -->
+    <div id="navBackdrop" class="nav-backdrop"></div>
+
+    <!-- BARRE DE NAVIGATION -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="brand-logo">
+                <img src="assets/logo.jpg" alt="Logo Centrale Domotique d'Éclairage Max_Adis">
+                <div class="brand-text-wrap">
+                    <div class="brand-name">DOMOLIGHT <span>TIMER BT</span></div>
+                    <div class="brand-tag">Maison à Étage · Max_Adis</div>
+                </div>
+            </a>
+
+            <!-- Bouton Hamburger Mobile -->
+            <button id="mobileNavToggle" class="mobile-nav-toggle" aria-label="Menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- 3 Éléments Principaux de Navigation -->
+            <div id="navLinks" class="nav-links">
+                <a href="#" class="nav-link-direct">Accueil</a>
+                <a href="#presentation" class="nav-link-direct">Présentation</a>
+
+                <!-- Menu Déroulant -->
+                <div class="nav-dropdown" id="navDropdown">
+                    <button class="dropdown-trigger" id="dropdownTrigger" aria-haspopup="true">
+                        <span>Explorer le Système</span>
+                        <svg class="dropdown-arrow" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="#simulateur" class="dropdown-item">
+                            <div class="dropdown-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title">Simulateur Maison à Étage</div>
+                                <div class="dropdown-item-desc">Tester les 2 niveaux & minuteries 10s</div>
+                            </div>
+                        </a>
+                        <a href="#fonctionnement" class="dropdown-item">
+                            <div class="dropdown-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title">Fonctionnement</div>
+                                <div class="dropdown-item-desc">Architecture & protocole Bluetooth</div>
+                            </div>
+                        </a>
+                        <a href="#materiels" class="dropdown-item">
+                            <div class="dropdown-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title">Nomenclature Matérielle</div>
+                                <div class="dropdown-item-desc">Arduino Uno, 2 Relais, 2 Lampes, HC-05</div>
+                            </div>
+                        </a>
+                        <a href="#etapes" class="dropdown-item">
+                            <div class="dropdown-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title">Étapes de Conception</div>
+                                <div class="dropdown-item-desc">Du câblage à la maison sur 2 niveaux</div>
+                            </div>
+                        </a>
+                        <a href="#tests" class="dropdown-item">
+                            <div class="dropdown-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title">Validation des Tests</div>
+                                <div class="dropdown-item-desc">Portée 10 m, ON/OFF et temporisation</div>
+                            </div>
+                        </a>
+                        <a href="#equipe" class="dropdown-item">
+                            <div class="dropdown-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title">Participants au Projet</div>
+                                <div class="dropdown-item-desc">HOUNMENOU · AGBANRIN · HOUANSOU</div>
+                            </div>
+                        </a>
+                        <a href="docs/Rapport_Projet_Centrale_Domotique_Eclairage_Minuterie.pdf" download class="dropdown-item" style="background: #fff7ed; border: 1px solid #fed7aa;">
+                            <div class="dropdown-item-icon" style="background: #f97316; color: #ffffff;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title" style="color: #9a3412;">Rapport Officiel (PDF)</div>
+                                <div class="dropdown-item-desc" style="color: #c2410c;">Télécharger le rapport complet (1.6 Mo)</div>
+                            </div>
+                        </a>
+                        <a href="#faq" class="dropdown-item">
+                            <div class="dropdown-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title">Foire Aux Questions</div>
+                                <div class="dropdown-item-desc">Auteurs, centre & accompagnement</div>
+                            </div>
+                        </a>
+                        <a href="#support" class="dropdown-item highlight">
+                            <div class="dropdown-item-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            </div>
+                            <div>
+                                <div class="dropdown-item-title">Contact & Support</div>
+                                <div class="dropdown-item-desc">Assistance technique & partenariats</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Bouton GitHub -->
+                <a href="https://github.com/maxadis-formation/CENTRALE-DOMOTIQUE-ECLAIRAGE-MINUTERIE" target="_blank" class="btn-github">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57C20.565 21.795 24 17.31 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    Dépôt GitHub
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- EN-TÊTE / HERO SECTION -->
+    <header class="hero-section">
+        <div class="container hero-grid">
+            <div class="hero-text-col">
+                <div class="hero-eyebrow">FORMATION MAX_ADIS 2026 · MAISON INTELLIGENTE À ÉTAGE</div>
+                <h1 class="hero-title">Centrale Domotique d'Éclairage avec <span>Minuterie Temporisée</span></h1>
+                <p class="hero-subtitle">
+                    Pilotage à distance via Bluetooth de l'éclairage intérieur d'une maquette de maison sur deux niveaux (Rez-de-chaussée & Étage) avec extinction automatique temporisée.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#simulateur" class="btn-hero-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        Simulateur Maison 2 Niveaux
+                    </a>
+                    <a href="#etapes" class="btn-hero-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                        Les Étapes de Réalisation
+                    </a>
+                </div>
+            </div>
+
+            <!-- Showcase Image Hero -->
+            <div class="hero-showcase">
+                <div class="hero-img-frame">
+                    <img src="assets/vu_exterieur.jpeg" alt="Maquette de la maison intelligente à étage sur deux niveaux">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1 & 2 : PRÉSENTATION & OBJECTIFS -->
+    <section id="presentation" class="bg-white-sec">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <span class="section-tag">Contexte & Problématique</span>
+                    <h2 class="section-title" style="margin-bottom: 1.25rem;">Pourquoi automatiser l'éclairage d'une maison à étage ?</h2>
+                    <p style="margin-bottom: 1rem;">
+                        Aujourd'hui, la domotique est au cœur des maisons intelligentes. Elle vise à améliorer le confort des occupants, à renforcer la sécurité et surtout à réaliser d'importantes économies d'énergie électrique.
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        L'éclairage représente une part majeure de la consommation électrique. Pourtant, il arrive fréquemment d'oublier une lampe allumée à l'étage ou au rez-de-chaussée en quittant une pièce, ou de devoir se lever la nuit uniquement pour actionner un interrupteur.
+                    </p>
+                    <p style="font-weight: 600; color: var(--primary-blue);">
+                        Problématique centrale : « Comment concevoir un système domotique simple, accessible et fiable, qui permette de piloter l'éclairage intérieur sur deux niveaux à distance via smartphone tout en intégrant une extinction automatique temporisée pour éviter le gaspillage ? »
+                    </p>
+                </div>
+
+                <div class="card-box">
+                    <span class="section-tag">Cahier des Charges & Buts</span>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Objectifs du Système</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-muted);">
+                        Objectif général : Concevoir une maison intelligente à étage (maquette sur deux niveaux) avec éclairage intérieur piloté par smartphone et minuterie automatique.
+                    </p>
+                    <ul class="bullet-list">
+                        <li><strong>Contrôle bi-zone indépendant :</strong> Pilotage séparé du Rez-de-chaussée (Lampe 1) et de l'Étage (Lampe 2) en 220V.</li>
+                        <li><strong>Minuterie temporisée (10s) :</strong> Extinction automatique après un temps défini (commandes <code>T</code> et <code>U</code>) pour éliminer tout oubli.</li>
+                        <li><strong>Fonctionnement 100 % local :</strong> Liaison Bluetooth HC-05 / HC-06 opérationnelle sans aucune connexion Internet (portée ~10 m).</li>
+                        <li><strong>Sécurité galvanique :</strong> Isolation de la puissance 220V via deux modules relais commandés par l'Arduino Uno.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 : FONCTIONNEMENT DU SYSTÈME -->
+    <section id="fonctionnement">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Architecture en 3 Phases & 6 Commandes</span>
+                <h2 class="section-title">Comment Fonctionne la Centrale Domotique ?</h2>
+                <p style="margin-top: 0.5rem;">
+                    Le système s'articule autour de trois phases (Commande mobile, Transmission/Traitement Bluetooth-Arduino, Action sur les relais 220V).
+                </p>
+            </div>
+
+            <div class="steps-flow-grid">
+                <div class="flow-step-card">
+                    <div class="flow-step-num">1</div>
+                    <h4>Connexion Smartphone</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">L'utilisateur ouvre l'application Android <em>« Eclairage avec minuterie »</em> et s'appaire au module Bluetooth.</p>
+                </div>
+                <div class="flow-step-card">
+                    <div class="flow-step-num">2</div>
+                    <h4>Émission de l'Ordre</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">Chaque bouton de l'application envoie un caractère précis (<code>A</code>, <code>B</code>, <code>T</code> pour le Niveau 1 ; <code>C</code>, <code>D</code>, <code>U</code> pour le Niveau 2).</p>
+                </div>
+                <div class="flow-step-card">
+                    <div class="flow-step-num">3</div>
+                    <h4>Réception Bluetooth</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">Le module HC-05 / HC-06 reçoit l'octet sans fil et le transmet à l'Arduino Uno via <code>SoftwareSerial(10, 11)</code>.</p>
+                </div>
+                <div class="flow-step-card">
+                    <div class="flow-step-num">4</div>
+                    <h4>Allumage / Extinction RDC</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">Les trames <code>'A'</code> (ON1) et <code>'B'</code> (OFF1) commutent le <strong>Relais 1 (Pin 2)</strong> qui alimente l'éclairage du rez-de-chaussée.</p>
+                </div>
+                <div class="flow-step-card">
+                    <div class="flow-step-num">5</div>
+                    <h4>Allumage / Extinction Étage</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">Les trames <code>'C'</code> (ON2) et <code>'D'</code> (OFF2) commutent le <strong>Relais 2 (Pin 3)</strong> qui alimente l'éclairage de l'étage supérieur.</p>
+                </div>
+                <div class="flow-step-card">
+                    <div class="flow-step-num">6</div>
+                    <h4>Minuteries Temporisées 10s</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem;">Les trames <code>'T'</code> (Minuterie 1) et <code>'U'</code> (Minuterie 2) allument le niveau choisi pendant <strong>10 secondes</strong> puis coupent le relais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4 : NOMENCLATURE MATÉRIELLE -->
+    <section id="materiels" class="bg-white-sec">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nomenclature du Rapport</span>
+                <h2 class="section-title">Liste des Matériels Utilisés et leur Rôle</h2>
+                <p style="margin-top: 0.5rem;">
+                    Composants électroniques et électriques employés pour l'éclairage intérieur sur deux niveaux.
+                </p>
+            </div>
+
+            <div class="hardware-grid">
+                <div class="table-responsive">
+                    <table class="hardware-table">
+                        <thead>
+                            <tr>
+                                <th>Matériel</th>
+                                <th>Rôle & Fonction dans le Projet</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Carte Arduino Uno</strong></td>
+                                <td>Unité centrale qui décode les commandes Bluetooth et gère les relais ainsi que la temporisation de 10 secondes.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Module Bluetooth HC-05 / HC-06</strong></td>
+                                <td>Assure la liaison série sans fil locale (portée ~10 m) entre le smartphone Android et l'Arduino.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Modules Relais (x2)</strong></td>
+                                <td>Jouent le rôle d'interrupteurs commandés isolés pour commuter les deux lampes 220V en toute sécurité.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Lampes LED 220V (x2)</strong></td>
+                                <td>Assurent l'éclairage intérieur du Niveau 1 (Rez-de-chaussée) et du Niveau 2 (Étage) de la maison.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Douilles électriques (x2)</strong></td>
+                                <td>Supports de fixation et de raccordement secteur pour les deux lampes LED.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Breadboard (MB-102)</strong></td>
+                                <td>Plaque d'essai sans soudure pour l'interconnexion des alimentations 5V/GND et des signaux de commande.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fils de connexion (Jumpers)</strong></td>
+                                <td>Assurent les liaisons électriques entre l'Arduino, le module Bluetooth et les modules relais.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Smartphone Android</strong></td>
+                                <td>Interface utilisateur exécutant l'application <em>« Eclairage avec minuterie »</em> conçue sous MIT App Inventor.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <div style="background: var(--bg-white); padding: 10px; border-radius: 20px; border: 1px solid var(--border-color); box-shadow: var(--shadow-card);">
+                        <img src="assets/composants.png" alt="Photo réelle des matériels : Arduino Uno, breadboard, relais et lampes LED" style="width: 100%; border-radius: 14px; display: block;">
+                        <p style="font-size: 0.82rem; color: var(--text-muted); text-align: center; margin-top: 0.6rem; font-weight: 600;">
+                            Photo réelle des composants électroniques et des 2 lampes LED
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5 : LES ÉTAPES DE RÉALISATION DU PROJET (AVEC PHOTOS EXTRAITES DU PDF) -->
+    <section id="etapes">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Processus de Conception</span>
+                <h2 class="section-title">Les Étapes de Réalisation du Projet</h2>
+                <p style="margin-top: 0.5rem;">
+                    Illustrations réelles extraites du rapport technique, du montage électronique jusqu'à la maison intelligente à étage.
+                </p>
+            </div>
+
+            <div class="etapes-showcase-grid">
+                <!-- Étape 1 : Montage électronique et circuit 220V -->
+                <div class="etape-card-full">
+                    <div class="etape-img-wrap">
+                        <img src="assets/montage_breadboard.png" alt="Étape 1 : Montage électronique avec les 2 lampes et relais">
+                    </div>
+                    <div class="etape-body">
+                        <span class="etape-badge-num">Étape 1</span>
+                        <h3>Montage Électronique & Câblage des 2 Lampes</h3>
+                        <p style="font-size: 0.92rem; color: var(--text-body);">
+                            Interfaçage sur breadboard de la carte Arduino Uno avec le module Bluetooth (broches 10 et 11) et les deux modules relais (broches 2 et 3) commandant les deux douilles et lampes LED 220V.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Étape 2 : Création de l'interface mobile -->
+                <div class="etape-card-full">
+                    <div class="etape-img-wrap">
+                        <img src="assets/interface_mobile.png" alt="Étape 2 : Interface de l'application mobile Eclairage avec minuterie" style="object-fit: contain; background: #0f172a; padding: 6px;">
+                    </div>
+                    <div class="etape-body">
+                        <span class="etape-badge-num">Étape 2</span>
+                        <h3>Création de l'Interface de l'Application</h3>
+                        <p style="font-size: 0.92rem; color: var(--text-body);">
+                            Conception visuelle de l'application Android <strong>« Eclairage avec minuterie »</strong> : bouton d'appairage <em>« Connectez-vous ici »</em>, commandes <code>ON1</code> / <code>OFF1</code> / <code>Minuterie 1</code> pour le 1er niveau et <code>ON2</code> / <code>OFF2</code> / <code>Minuterie 2</code> pour l'étage.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Étape 3 : Programmation Blocs MIT App Inventor & Code Arduino -->
+                <div class="etape-card-full">
+                    <div class="etape-img-wrap">
+                        <img src="assets/mit_app_inventor_blocks.png" alt="Étape 3 : Blocs logiques MIT App Inventor" style="object-fit: contain; background: #ffffff; padding: 8px;">
+                    </div>
+                    <div class="etape-body">
+                        <span class="etape-badge-num">Étape 3</span>
+                        <h3>Blocs MIT App Inventor & Programmation C++</h3>
+                        <p style="font-size: 0.92rem; color: var(--text-body);">
+                            Programmation événementielle des blocs <code>BluetoothClient1.SendText</code> envoyant les caractères <code>A</code>, <code>B</code>, <code>T</code>, <code>C</code>, <code>D</code>, <code>U</code> et codage sous Arduino IDE des relais et du timer de 10 secondes (<code>delay(10000)</code>).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Étape 4 : Finalisation de la maison à étage -->
+                <div class="etape-card-full">
+                    <div class="etape-img-wrap">
+                        <img src="assets/maquette_vues_completes.png" alt="Étape 4 : Vues complètes de la maquette de maison à étage">
+                    </div>
+                    <div class="etape-body">
+                        <span class="etape-badge-num">Étape 4</span>
+                        <h3>Finalisation de la Maison Intelligente à Étage</h3>
+                        <p style="font-size: 0.92rem; color: var(--text-body);">
+                            Réalisation de la maquette architecturale sur deux niveaux (rez-de-chaussée et étage supérieur avec balcon gazonné, fenêtres vitrées et toiture tuilée) intégrant l'éclairage intérieur indépendant à chaque niveau.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6 : SIMULATEUR LIVE (MAISON INTELLIGENTE À ÉTAGE & MINUTERIE 10S) -->
+    <section id="simulateur" class="bg-white-sec">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Jumeau Numérique Interactif</span>
+                <h2 class="section-title">Simulateur Live — Maison à Étage & Minuterie 10s</h2>
+                <p style="margin-top: 0.5rem;">
+                    Testez en direct le comportement exact du programme Arduino : allumez ou éteignez chaque étage ou déclenchez la minuterie temporisée de 10 secondes.
+                </p>
+            </div>
+
+            <div class="simulator-panel">
+                <div style="display: flex; flex-direction: column; gap: 1.35rem;">
+                    <!-- Contrôle Niveau 2 : Étage Supérieur (Lampe 2 / Relais 2) -->
+                    <div id="cardFloor2" class="floor-control-card">
+                        <div class="floor-header">
+                            <span class="floor-title">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-blue)" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                                Niveau 2 — Étage Supérieur (Lampe 2 / Pin 3)
+                            </span>
+                            <span id="badgeFloor2" class="floor-badge">ÉTEINT (HIGH)</span>
+                        </div>
+                        <div class="app-btn-grid">
+                            <button class="btn-sim-cmd btn-sim-on" onclick="sendBtCommand('C')">
+                                <span>● ON2 (Trame 'C')</span>
+                            </button>
+                            <button class="btn-sim-cmd btn-sim-off" onclick="sendBtCommand('D')">
+                                <span>○ OFF2 (Trame 'D')</span>
+                            </button>
+                            <button class="btn-sim-cmd btn-sim-timer" onclick="sendBtCommand('U')">
+                                <span>⏱ Minuterie 2 ('U' · 10s)</span>
+                            </button>
+                        </div>
+                        <div id="timerWrap2" class="timer-bar-wrap">
+                            <div id="timerFill2" class="timer-bar-fill"></div>
+                        </div>
+                    </div>
+
+                    <!-- Contrôle Niveau 1 : Rez-de-chaussée (Lampe 1 / Relais 1) -->
+                    <div id="cardFloor1" class="floor-control-card">
+                        <div class="floor-header">
+                            <span class="floor-title">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--thermal-orange)" stroke-width="2.2"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="4" y1="12" x2="20" y2="12"/></svg>
+                                Niveau 1 — Rez-de-Chaussée (Lampe 1 / Pin 2)
+                            </span>
+                            <span id="badgeFloor1" class="floor-badge">ÉTEINT (HIGH)</span>
+                        </div>
+                        <div class="app-btn-grid">
+                            <button class="btn-sim-cmd btn-sim-on" onclick="sendBtCommand('A')">
+                                <span>● ON1 (Trame 'A')</span>
+                            </button>
+                            <button class="btn-sim-cmd btn-sim-off" onclick="sendBtCommand('B')">
+                                <span>○ OFF1 (Trame 'B')</span>
+                            </button>
+                            <button class="btn-sim-cmd btn-sim-timer" onclick="sendBtCommand('T')">
+                                <span>⏱ Minuterie 1 ('T' · 10s)</span>
+                            </button>
+                        </div>
+                        <div id="timerWrap1" class="timer-bar-wrap">
+                            <div id="timerFill1" class="timer-bar-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rendu Visuel de la Maquette sur 2 Niveaux -->
+                <div class="house-sim-box">
+                    <div class="house-svg-wrap">
+                        <svg viewBox="0 0 260 270" width="100%" height="100%">
+                            <!-- Pelouse socle -->
+                            <rect x="10" y="242" width="240" height="14" rx="5" fill="#16a34a"/>
+                            <!-- Toiture rouge en tuiles -->
+                            <polygon points="130,12 25,75 235,75" fill="#ea580c" stroke="#f97316" stroke-width="3"/>
+                            <line x1="65" y1="50" x2="195" y2="50" stroke="#fdba74" stroke-width="1.5" stroke-dasharray="6 4"/>
+                            <line x1="45" y1="63" x2="215" y2="63" stroke="#fdba74" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+                            <!-- Étage Supérieur (Niveau 2) -->
+                            <rect x="45" y="75" width="170" height="78" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+                            <!-- Fenêtre Étage (Lampe 2) -->
+                            <rect id="svgWindowFloor2" class="window-room" x="92" y="88" width="76" height="52" rx="4" fill="#334155" stroke="#1e293b" stroke-width="4"/>
+                            <line x1="130" y1="88" x2="130" y2="140" stroke="#1e293b" stroke-width="3"/>
+                            <text x="130" y="118" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="bold" style="pointer-events:none;">ÉTAGE (L2)</text>
+
+                            <!-- Balcon vert gazonné entre les 2 niveaux -->
+                            <rect x="34" y="150" width="192" height="16" rx="4" fill="#22c55e" stroke="#15803d" stroke-width="2"/>
+
+                            <!-- Rez-de-Chaussée (Niveau 1) -->
+                            <rect x="45" y="166" width="170" height="76" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+                            <!-- Fenêtre RDC (Lampe 1) -->
+                            <rect id="svgWindowFloor1" class="window-room" x="92" y="178" width="76" height="52" rx="4" fill="#334155" stroke="#1e293b" stroke-width="4"/>
+                            <line x1="130" y1="178" x2="130" y2="230" stroke="#1e293b" stroke-width="3"/>
+                            <text x="130" y="208" text-anchor="middle" fill="#94a3b8" font-size="10" font-weight="bold" style="pointer-events:none;">RDC (L1)</text>
+                        </svg>
+                    </div>
+
+                    <div id="houseStatusBadge" style="font-weight: 800; font-size: 0.9rem; padding: 0.4rem 1.15rem; border-radius: 999px; background: #1e293b; border: 1px solid #475569; color: #cbd5e1;">
+                        Maison en Veille (2 Lampes Éteintes)
+                    </div>
+
+                    <div class="telemetry-tag" id="telemetryFeed">
+                        HC-05 RX : En attente | relay1(D2)=HIGH | relay2(D3)=HIGH
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7 : VALIDATION DES TESTS -->
+    <section id="tests">
+        <div class="container">
+            <div class="section-header" style="margin-bottom: 0;">
+                <span class="section-tag">Essais en Conditions Réelles</span>
+                <h2 class="section-title">Tests du Système et Validation Fonctionnelle</h2>
+                <p style="margin-top: 1.25rem; max-width: 850px; margin-left: auto; margin-right: auto; line-height: 1.85; font-size: 1.05rem; color: var(--text-body);">
+                    Au cours des essais, la centrale domotique a commandé sans fil les deux charges électriques 220V (éclairage du rez-de-chaussée et de l'étage) à l'aide de l'application Android et du module Bluetooth. Chaque relais répond instantanément en mode <strong>ON/OFF</strong> ainsi qu'en mode <strong>Minuterie temporisée de 10 secondes</strong>, avec une portée sans fil validée sur une distance d'environ <strong>10 mètres</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8 : ÉQUIPE & PARTICIPANTS -->
+    <section id="equipe" class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Auteurs & Concepteurs</span>
+                <h2 class="section-title">Participants au Projet</h2>
+                <p style="margin-top: 0.5rem;">
+                    Projet conçu et réalisé par l'équipe du <strong>Projet n°12 — Centrale Domotique d'Éclairage</strong>
+                </p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <div class="avatar-box">HM</div>
+                    <div class="team-name" itemprop="name">HOUNMENOU Martial</div>
+                    <div class="team-role" itemprop="jobTitle">Système Embarqué & Code C++</div>
+                    <div class="team-group" itemprop="affiliation">Projet n°12 · Centre de Formation Max_Adis</div>
+                </div>
+
+                <div class="team-card" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <div class="avatar-box">AI</div>
+                    <div class="team-name" itemprop="name">AGBANRIN Ishola</div>
+                    <div class="team-role" itemprop="jobTitle">Électronique & Intégration 220V</div>
+                    <div class="team-group" itemprop="affiliation">Projet n°12 · Centre de Formation Max_Adis</div>
+                </div>
+
+                <div class="team-card" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <div class="avatar-box">HR</div>
+                    <div class="team-name" itemprop="name">HOUANSOU Régis A.</div>
+                    <div class="team-role" itemprop="jobTitle">Application Mobile & Maquette</div>
+                    <div class="team-group" itemprop="affiliation">Projet n°12 · Centre de Formation Max_Adis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION FAQ -->
+    <section id="faq" class="bg-white-sec">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Foire Aux Questions (FAQ)</h2>
+                <p style="margin-top: 0.5rem;">
+                    Informations officielles sur la conception de la maison intelligente à étage, l'équipe du projet et le centre Max_Adis.
+                </p>
+            </div>
+
+            <div class="faq-accordion-list">
+                <!-- Question 1 -->
+                <div class="faq-accordion-item">
+                    <button class="faq-accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+                        <span class="faq-accordion-title">Qui a conçu et réalisé la Centrale Domotique d'Éclairage avec Fonction Minuterie Temporisée ?</span>
+                        <span class="faq-accordion-icon">+</span>
+                    </button>
+                    <div class="faq-accordion-content">
+                        <div class="faq-accordion-body">
+                            Ce système domotique et sa maquette de maison intelligente sur deux niveaux ont été entièrement conçus, câblés et programmés par <strong>HOUNMENOU Martial</strong>, <strong>AGBANRIN Ishola</strong> et <strong>HOUANSOU Régis A.</strong> (Projet n°12 — Édition 2026).
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="faq-accordion-item">
+                    <button class="faq-accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+                        <span class="faq-accordion-title">Comment fonctionne la minuterie temporisée sur les deux étages de la maquette ?</span>
+                        <span class="faq-accordion-icon">+</span>
+                    </button>
+                    <div class="faq-accordion-content">
+                        <div class="faq-accordion-body">
+                            L'application Android <strong>« Eclairage avec minuterie »</strong> propose deux modes par niveau : un mode manuel (<code>ON1</code>/<code>OFF1</code> pour le rez-de-chaussée, <code>ON2</code>/<code>OFF2</code> pour l'étage) et un mode temporisé via les boutons <strong>Minuterie 1</strong> (trame <code>T</code>) et <strong>Minuterie 2</strong> (trame <code>U</code>) qui allument l'étage sélectionné pendant <strong>10 secondes</strong> avant de couper automatiquement le relais.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="faq-accordion-item">
+                    <button class="faq-accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+                        <span class="faq-accordion-title">Dans quel centre de formation ce projet a-t-il été développé ?</span>
+                        <span class="faq-accordion-icon">+</span>
+                    </button>
+                    <div class="faq-accordion-content">
+                        <div class="faq-accordion-body">
+                            Ce projet a été réalisé au <strong>Centre de Formation Professionnelle Max_Adis</strong> situé à <strong>Porto-Novo, Bénin</strong>, dans le cadre de la formation pratique en <strong>Systèmes Embarqués, Domotique, Électronique et Internet des Objets (IoT)</strong> — Édition 2026.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="faq-accordion-item">
+                    <button class="faq-accordion-header" aria-expanded="false" onclick="toggleFaq(this)">
+                        <span class="faq-accordion-title">Puis-je consulter le rapport PDF officiel et être accompagné pour un projet similaire ?</span>
+                        <span class="faq-accordion-icon">+</span>
+                    </button>
+                    <div class="faq-accordion-content">
+                        <div class="faq-accordion-body">
+                            <strong>Oui, absolument !</strong> Vous pouvez télécharger le <a href="docs/Rapport_Projet_Centrale_Domotique_Eclairage_Minuterie.pdf" download>Rapport Officiel PDF du Projet</a> directement sur ce site. Pour tout accompagnement en domotique, électronique ou systèmes embarqués, contactez le Centre <strong>Max_Adis</strong> par WhatsApp au <a href="https://wa.me/2290154116425" target="_blank">+229 01 54 11 64 25</a> ou par email à <a href="mailto:maxadisorg@gmail.com">maxadisorg@gmail.com</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 9 : CONTACT, SUPPORT & ACCOMPAGNEMENT PROJETS -->
+    <section id="support" class="support-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Support Technique & Contact</h2>
+                <p style="margin-top: 0.5rem;">
+                    Une question sur la réalisation de cette maison intelligente à étage ou un besoin d'assistance pour vos propres prototypes ?
+                </p>
+            </div>
+
+            <div class="support-grid">
+                <!-- Carte 1 : Max_Adis Mentorat -->
+                <div class="support-card">
+                    <div>
+                        <div class="support-card-head">
+                            <div class="support-icon-wrap">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                            </div>
+                            <div class="support-card-title">Centre Max_Adis</div>
+                        </div>
+                        <p class="support-body-text">
+                            Centre d'excellence et d'innovation pratique basé à Porto-Novo. Max_Adis forme les passionnés, étudiants et professionnels aux technologies d'avenir : <strong>Domotique, Systèmes Embarqués, IoT, Robotique et Électronique</strong>.
+                        </p>
+                    </div>
+                    <div class="support-highlight-box">
+                        « Crée et contrôle tes propres systèmes intelligents. »
+                    </div>
+                </div>
+
+                <!-- Carte 2 : Assistance & Réalisation Projets -->
+                <div class="support-card">
+                    <div>
+                        <div class="support-card-head">
+                            <div class="support-icon-wrap">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            </div>
+                            <div class="support-card-title">Besoin d'Aide ?</div>
+                        </div>
+                        <p class="support-body-text">
+                            Vous réalisez un projet domotique similaire ou souhaitez concevoir une maquette intelligente sur mesure ? Nos équipes vous accompagnent de l'idée au déploiement.
+                        </p>
+                        <div class="contact-links-list">
+                            <a href="mailto:maxadisorg@gmail.com" class="contact-link-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary-blue)" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                <span>maxadisorg@gmail.com</span>
+                            </a>
+                            <a href="tel:+2290154116425" class="contact-link-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--primary-blue)" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                <span>+229 01 54 11 64 25</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carte 3 : GitHub & Documentation Open Source -->
+                <div class="support-card">
+                    <div>
+                        <div class="support-card-head">
+                            <div class="support-icon-wrap">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57C20.565 21.795 24 17.31 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                            </div>
+                            <div class="support-card-title">Code Source & Docs</div>
+                        </div>
+                        <p class="support-body-text">
+                            Le projet est entièrement documenté et open-source. Retrouvez le <strong>code Arduino (C++)</strong>, les <strong>blocs MIT App Inventor</strong>, les photos de la maquette à étage et le <strong>rapport PDF complet</strong>.
+                        </p>
+                    </div>
+                    <a href="https://github.com/maxadis-formation/CENTRALE-DOMOTIQUE-ECLAIRAGE-MINUTERIE" target="_blank" class="btn-card-github">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57C20.565 21.795 24 17.31 24 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        Voir le Dépôt GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de Page -->
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <p class="footer-text">Centrale Domotique d'Éclairage avec Fonction Minuterie Temporisée — Maison Intelligente à Étage</p>
+                <p class="footer-sub">HOUNMENOU Martial · AGBANRIN Ishola · HOUANSOU Régis A. · Édition 2026 · Centre de Formation Max_Adis · Porto-Novo, Bénin</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Logique Interactive du Simulateur Maison à Étage & Menu Mobile -->
+    <script>
+        // Menu Mobile & Navigation Responsive
+        const mobileNavToggle = document.getElementById('mobileNavToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navBackdrop = document.getElementById('navBackdrop');
+        const navDropdown = document.getElementById('navDropdown');
+        const dropdownTrigger = document.getElementById('dropdownTrigger');
+
+        function toggleMobileMenu(forceClose = false) {
+            const shouldOpen = forceClose ? false : !navLinks.classList.contains('open');
+            navLinks.classList.toggle('open', shouldOpen);
+            mobileNavToggle.classList.toggle('open', shouldOpen);
+            navBackdrop.classList.toggle('open', shouldOpen);
+            mobileNavToggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+            document.body.style.overflow = shouldOpen ? 'hidden' : '';
+        }
+
+        if (mobileNavToggle) {
+            mobileNavToggle.addEventListener('click', () => toggleMobileMenu());
+        }
+
+        if (navBackdrop) {
+            navBackdrop.addEventListener('click', () => toggleMobileMenu(true));
+        }
+
+        if (dropdownTrigger) {
+            dropdownTrigger.addEventListener('click', (e) => {
+                if (window.innerWidth <= 860) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    navDropdown.classList.toggle('active');
+                }
+            });
+        }
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 860) {
+                    toggleMobileMenu(true);
+                }
+            });
+        });
+
+        // Bouton Revenir en Haut
+        const btnScrollTop = document.getElementById('btnScrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                btnScrollTop.classList.add('visible');
+            } else {
+                btnScrollTop.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Simulateur Live : Maison Intelligente à Étage (2 Relais + Minuteries 10s)
+        let relay1On = false; // RDC (Pin 2)
+        let relay2On = false; // Étage (Pin 3)
+        let timerInterval = null;
+        let activeTimerFloor = 0;
+        let remainingMs = 0;
+
+        const cardFloor1 = document.getElementById('cardFloor1');
+        const cardFloor2 = document.getElementById('cardFloor2');
+        const badgeFloor1 = document.getElementById('badgeFloor1');
+        const badgeFloor2 = document.getElementById('badgeFloor2');
+        const svgWindowFloor1 = document.getElementById('svgWindowFloor1');
+        const svgWindowFloor2 = document.getElementById('svgWindowFloor2');
+        const timerWrap1 = document.getElementById('timerWrap1');
+        const timerWrap2 = document.getElementById('timerWrap2');
+        const timerFill1 = document.getElementById('timerFill1');
+        const timerFill2 = document.getElementById('timerFill2');
+        const houseStatusBadge = document.getElementById('houseStatusBadge');
+        const telemetryFeed = document.getElementById('telemetryFeed');
+
+        function clearActiveTimer() {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+            activeTimerFloor = 0;
+            timerWrap1.style.display = 'none';
+            timerWrap2.style.display = 'none';
+        }
+
+        function updateHouseUI(lastChar) {
+            // Niveau 1 (RDC)
+            if (relay1On) {
+                cardFloor1.classList.add('lit');
+                svgWindowFloor1.classList.add('lit-room');
+                if (activeTimerFloor === 1) {
+                    badgeFloor1.className = 'floor-badge timer';
+                    badgeFloor1.textContent = `MINUTERIE (${(remainingMs / 1000).toFixed(1)}s)`;
+                } else {
+                    badgeFloor1.className = 'floor-badge on';
+                    badgeFloor1.textContent = 'ALLUMÉ (LOW)';
+                }
+            } else {
+                cardFloor1.classList.remove('lit');
+                svgWindowFloor1.classList.remove('lit-room');
+                badgeFloor1.className = 'floor-badge';
+                badgeFloor1.textContent = 'ÉTEINT (HIGH)';
+            }
+
+            // Niveau 2 (Étage)
+            if (relay2On) {
+                cardFloor2.classList.add('lit');
+                svgWindowFloor2.classList.add('lit-room');
+                if (activeTimerFloor === 2) {
+                    badgeFloor2.className = 'floor-badge timer';
+                    badgeFloor2.textContent = `MINUTERIE (${(remainingMs / 1000).toFixed(1)}s)`;
+                } else {
+                    badgeFloor2.className = 'floor-badge on';
+                    badgeFloor2.textContent = 'ALLUMÉ (LOW)';
+                }
+            } else {
+                cardFloor2.classList.remove('lit');
+                svgWindowFloor2.classList.remove('lit-room');
+                badgeFloor2.className = 'floor-badge';
+                badgeFloor2.textContent = 'ÉTEINT (HIGH)';
+            }
+
+            // Badge global maison
+            if (relay1On && !relay2On) {
+                houseStatusBadge.style.background = '#fef08a';
+                houseStatusBadge.style.color = '#854d0e';
+                houseStatusBadge.style.borderColor = '#facc15';
+                houseStatusBadge.textContent = activeTimerFloor === 1
+                    ? `RDC Allumé — Extinction auto dans ${(remainingMs / 1000).toFixed(1)}s`
+                    : 'Rez-de-Chaussée Allumé (Lampe 1 ON)';
+            } else if (!relay1On && relay2On) {
+                houseStatusBadge.style.background = '#fef08a';
+                houseStatusBadge.style.color = '#854d0e';
+                houseStatusBadge.style.borderColor = '#facc15';
+                houseStatusBadge.textContent = activeTimerFloor === 2
+                    ? `Étage Allumé — Extinction auto dans ${(remainingMs / 1000).toFixed(1)}s`
+                    : 'Étage Supérieur Allumé (Lampe 2 ON)';
+            } else {
+                houseStatusBadge.style.background = '#1e293b';
+                houseStatusBadge.style.color = '#cbd5e1';
+                houseStatusBadge.style.borderColor = '#475569';
+                houseStatusBadge.textContent = 'Maison en Veille (2 Lampes Éteintes)';
+            }
+
+            const r1State = relay1On ? 'LOW (ON)' : 'HIGH (OFF)';
+            const r2State = relay2On ? 'LOW (ON)' : 'HIGH (OFF)';
+            telemetryFeed.textContent = `HC-05 RX < '${lastChar}' | relay1(D2)=${r1State} | relay2(D3)=${r2State}`;
+        }
+
+        function startTimerCountdown(floor, cmdChar) {
+            clearActiveTimer();
+            activeTimerFloor = floor;
+            remainingMs = 10000;
+            const wrap = floor === 1 ? timerWrap1 : timerWrap2;
+            const fill = floor === 1 ? timerFill1 : timerFill2;
+            wrap.style.display = 'block';
+            fill.style.width = '100%';
+
+            updateHouseUI(cmdChar);
+
+            timerInterval = setInterval(() => {
+                remainingMs -= 200;
+                const pct = Math.max(0, (remainingMs / 10000) * 100);
+                fill.style.width = pct + '%';
+
+                if (remainingMs <= 0) {
+                    clearActiveTimer();
+                    relay1On = false;
+                    relay2On = false;
+                    updateHouseUI(cmdChar + ' [FIN 10s]');
+                } else {
+                    updateHouseUI(cmdChar);
+                }
+            }, 200);
+        }
+
+        function sendBtCommand(cmd) {
+            clearActiveTimer();
+            if (cmd === 'A') {
+                relay1On = true;
+                relay2On = false;
+                updateHouseUI('A');
+            } else if (cmd === 'B') {
+                relay1On = false;
+                relay2On = false;
+                updateHouseUI('B');
+            } else if (cmd === 'C') {
+                relay1On = false;
+                relay2On = true;
+                updateHouseUI('C');
+            } else if (cmd === 'D') {
+                relay1On = false;
+                relay2On = false;
+                updateHouseUI('D');
+            } else if (cmd === 'T') {
+                relay1On = true;
+                relay2On = false;
+                startTimerCountdown(1, 'T');
+            } else if (cmd === 'U') {
+                relay1On = false;
+                relay2On = true;
+                startTimerCountdown(2, 'U');
+            }
+        }
+
+        // Accordéon FAQ interactif
+        function toggleFaq(btn) {
+            const item = btn.closest('.faq-accordion-item');
+            const isActive = item.classList.contains('active');
+            
+            document.querySelectorAll('.faq-accordion-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                    const otherBtn = otherItem.querySelector('.faq-accordion-header');
+                    if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            if (isActive) {
+                item.classList.remove('active');
+                btn.setAttribute('aria-expanded', 'false');
+            } else {
+                item.classList.add('active');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        }
+    </script>
+</body>
+</html>
