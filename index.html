@@ -20,7 +20,7 @@
     <link rel="canonical" href="https://maxadis-domotique-eclairage.vercel.app/">
     
     <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
-    <meta property="og:site_name" content="DomoLight Timer BT — Max_Adis Formation">
+    <meta property="og:site_name" content="DomoLight Timer — Max_Adis Formation">
     <meta property="og:title" content="Centrale Domotique d'Éclairage avec Fonction Minuterie Temporisée (Maison à Étage)">
     <meta property="og:description" content="Pilotage sans fil Bluetooth de l'éclairage intérieur sur deux niveaux (Rez-de-chaussée & Étage) avec minuterie automatique 10s. Réalisé par HOUNMENOU Martial, AGBANRIN Ishola et HOUANSOU Régis A.">
     <meta property="og:url" content="https://maxadis-domotique-eclairage.vercel.app/">
@@ -185,13 +185,13 @@
 
     <style>
         :root {
-            /* Palette Dérivée du Logo Max_Adis & Éclairage Domotique */
-            --primary-blue: #0072CE;
-            --primary-blue-hover: #005bb5;
-            --primary-blue-dark: #00458a;
-            --sky-blue: #38bdf8;
-            --sky-blue-light: #f0f9ff;
-            --sky-blue-border: #bae6fd;
+            /* Palette Principale Bordeaux / Crimson (#6e0000) & Éclairage Domotique */
+            --primary-blue: #6e0000;
+            --primary-blue-hover: #560000;
+            --primary-blue-dark: #450000;
+            --sky-blue: #991b1b;
+            --sky-blue-light: #fef2f2;
+            --sky-blue-border: #fecaca;
             
             --thermal-orange: #F97316;
             --thermal-orange-light: #fff7ed;
@@ -213,9 +213,9 @@
             --border-light: #f1f5f9;
             
             --shadow-subtle: 0 2px 6px rgba(0, 0, 0, 0.04);
-            --shadow-card: 0 10px 25px -5px rgba(2, 132, 199, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
-            --shadow-card-hover: 0 20px 35px -8px rgba(0, 114, 206, 0.14), 0 10px 15px -3px rgba(0, 0, 0, 0.04);
-            --shadow-hero: 0 20px 40px -10px rgba(0, 114, 206, 0.16);
+            --shadow-card: 0 10px 25px -5px rgba(110, 0, 0, 0.06), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+            --shadow-card-hover: 0 20px 35px -8px rgba(110, 0, 0, 0.14), 0 10px 15px -3px rgba(0, 0, 0, 0.04);
+            --shadow-hero: 0 20px 40px -10px rgba(110, 0, 0, 0.16);
             --shadow-dropdown: 0 20px 40px -10px rgba(15, 23, 42, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
         }
 
@@ -239,9 +239,9 @@
             font-size: 16px;
             -webkit-font-smoothing: antialiased;
             background-image: 
-                radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 15% 15%, rgba(153, 27, 27, 0.05) 0%, transparent 40%),
                 radial-gradient(circle at 85% 30%, rgba(249, 115, 22, 0.04) 0%, transparent 40%),
-                radial-gradient(circle at 50% 85%, rgba(0, 114, 206, 0.04) 0%, transparent 50%);
+                radial-gradient(circle at 50% 85%, rgba(110, 0, 0, 0.04) 0%, transparent 50%);
             background-attachment: fixed;
         }
 
@@ -295,7 +295,7 @@
             object-fit: cover;
             border-radius: 12px;
             border: 2px solid var(--primary-blue);
-            box-shadow: 0 4px 12px rgba(0, 114, 206, 0.16);
+            box-shadow: 0 4px 12px rgba(110, 0, 0, 0.16);
             transition: transform 0.4s ease;
         }
 
@@ -522,27 +522,27 @@
         }
 
         .dropdown-item.highlight:hover {
-            background: #e0f2fe;
+            background: #fee2e2;
         }
 
         .btn-github {
             display: inline-flex;
             align-items: center;
             gap: 0.55rem;
-            background: linear-gradient(135deg, var(--primary-blue), #0284c7);
+            background: linear-gradient(135deg, var(--primary-blue), #991b1b);
             color: #ffffff !important;
             padding: 0.6rem 1.35rem;
             border-radius: 999px;
             font-size: 0.85rem;
             font-weight: 700;
             text-decoration: none;
-            box-shadow: 0 4px 14px rgba(0, 114, 206, 0.22);
+            box-shadow: 0 4px 14px rgba(110, 0, 0, 0.22);
             transition: all 0.25s ease;
         }
 
         .btn-github:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 114, 206, 0.32);
+            box-shadow: 0 6px 20px rgba(110, 0, 0, 0.32);
             background: linear-gradient(135deg, var(--primary-blue-dark), var(--primary-blue));
         }
 
@@ -550,9 +550,9 @@
            HERO SECTION ÉPURÉE, AÉRÉE & DISTINCTE
         ------------------------------------------------------------- */
         .hero-section {
-            padding: 4.5rem 0 4.5rem 0;
+            padding: 2.25rem 0 1.5rem 0;
             position: relative;
-            background: linear-gradient(180deg, #f0f7ff 0%, #f8fafc 45%, #ffffff 100%);
+            background: linear-gradient(180deg, #fff5f5 0%, #f8fafc 45%, #ffffff 100%);
         }
 
         .hero-grid {
@@ -586,7 +586,7 @@
         }
 
         .hero-title span {
-            background: linear-gradient(135deg, var(--primary-blue), #0284c7);
+            background: linear-gradient(135deg, var(--primary-blue), #991b1b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -612,20 +612,20 @@
             align-items: center;
             justify-content: center;
             gap: 0.6rem;
-            background: linear-gradient(135deg, var(--primary-blue), #0284c7);
+            background: linear-gradient(135deg, var(--primary-blue), #991b1b);
             color: #ffffff;
             padding: 0.95rem 1.85rem;
             border-radius: 14px;
             font-weight: 700;
             font-size: 0.98rem;
             text-decoration: none;
-            box-shadow: 0 8px 22px rgba(0, 114, 206, 0.25);
+            box-shadow: 0 8px 22px rgba(110, 0, 0, 0.25);
             transition: all 0.25s ease;
         }
 
         .btn-hero-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 28px rgba(0, 114, 206, 0.35);
+            box-shadow: 0 12px 28px rgba(110, 0, 0, 0.35);
         }
 
         .btn-hero-secondary {
@@ -719,13 +719,13 @@
 
         /* SECTIONS GÉNÉRALES */
         section {
-            padding: 4.5rem 0;
+            padding: 1.75rem 0;
         }
 
         .section-header {
             text-align: center;
             max-width: 800px;
-            margin: 0 auto 3rem auto;
+            margin: 0 auto 1.35rem auto;
         }
 
         .section-tag {
@@ -751,6 +751,7 @@
 
         #presentation.bg-white-sec {
             border-top: none;
+            padding-top: 1.75rem;
         }
 
         /* 1. Problématique & Objectifs */
@@ -1123,7 +1124,7 @@
             width: 100%;
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.78rem;
-            color: #38bdf8;
+            color: #fca5a5;
             background: rgba(15, 23, 42, 0.85);
             padding: 0.55rem 0.9rem;
             border-radius: 10px;
@@ -1133,7 +1134,7 @@
 
         /* 6. Section Participants & Équipe */
         .team-section {
-            padding: 4.5rem 0;
+            padding: 1.75rem 0;
             background: var(--bg-page);
             border-top: 1px solid var(--border-color);
         }
@@ -1166,14 +1167,14 @@
             height: 72px;
             border-radius: 50%;
             margin: 0 auto 1.25rem auto;
-            background: linear-gradient(135deg, var(--primary-blue), #38bdf8);
+            background: linear-gradient(135deg, var(--primary-blue), #991b1b);
             display: flex;
             align-items: center;
             justify-content: center;
             color: #ffffff;
             font-weight: 800;
             font-size: 1.35rem;
-            box-shadow: 0 8px 18px rgba(0, 114, 206, 0.25);
+            box-shadow: 0 8px 18px rgba(110, 0, 0, 0.25);
             border: 3px solid #ffffff;
         }
 
@@ -1200,7 +1201,7 @@
 
         /* 7. SECTION CONTACT, SUPPORT & ACCOMPAGNEMENT PROJETS */
         .support-section {
-            padding: 4.5rem 0;
+            padding: 1.75rem 0;
             background: #ffffff;
             border-top: 1px solid var(--border-color);
         }
@@ -1322,7 +1323,7 @@
         .btn-card-github:hover {
             background: var(--primary-blue);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 114, 206, 0.35);
+            box-shadow: 0 6px 20px rgba(110, 0, 0, 0.35);
         }
 
         /* -------------------------------------------------------------
@@ -1351,8 +1352,8 @@
         }
 
         .faq-accordion-item.active {
-            border-color: #bfdbfe;
-            box-shadow: 0 8px 24px rgba(0, 114, 206, 0.09);
+            border-color: #fecaca;
+            box-shadow: 0 8px 24px rgba(110, 0, 0, 0.09);
         }
 
         .faq-accordion-header {
@@ -1588,16 +1589,16 @@
             }
 
             section {
-                padding: 3rem 0;
+                padding: 1.5rem 0;
             }
 
             .hero-section {
-                padding: 2.75rem 0 4.5rem 0;
-                background: linear-gradient(180deg, #f0f7ff 0%, #f8fafc 50%, #ffffff 100%);
+                padding: 1.5rem 0 1.25rem 0;
+                background: linear-gradient(180deg, #fff5f5 0%, #f8fafc 50%, #ffffff 100%);
             }
 
             .hero-grid {
-                gap: 2.25rem;
+                gap: 1.5rem;
             }
 
             .hero-text-col {
@@ -1611,7 +1612,7 @@
                 font-weight: 800;
                 letter-spacing: 0.12em;
                 color: var(--primary-blue);
-                background: rgba(0, 114, 206, 0.08);
+                background: rgba(110, 0, 0, 0.08);
                 padding: 0.35rem 0.95rem;
                 border-radius: 999px;
                 margin-bottom: 1rem;
@@ -1629,7 +1630,7 @@
                 font-size: 1.02rem;
                 line-height: 1.65;
                 color: var(--text-body);
-                margin-bottom: 2rem;
+                margin-bottom: 0.5rem;
                 max-width: 520px;
                 margin-left: auto;
                 margin-right: auto;
@@ -1647,7 +1648,7 @@
                 padding: 8px;
                 border-radius: 22px;
                 border: 1.5px solid var(--border-color);
-                box-shadow: 0 12px 30px rgba(0, 114, 206, 0.12);
+                box-shadow: 0 12px 30px rgba(110, 0, 0, 0.12);
                 background: #ffffff;
             }
 
@@ -1750,7 +1751,7 @@
             }
 
             .hero-section {
-                padding: 2.25rem 0 4.25rem 0;
+                padding: 1.75rem 0 1.5rem 0;
             }
 
             .hero-title {
@@ -1783,7 +1784,7 @@
             <a href="#" class="brand-logo">
                 <img src="assets/logo.jpg" alt="Logo Centrale Domotique d'Éclairage Max_Adis">
                 <div class="brand-text-wrap">
-                    <div class="brand-name">DOMOLIGHT <span>TIMER BT</span></div>
+                    <div class="brand-name">DOMOLIGHT <span>TIMER</span></div>
                     <div class="brand-tag">Maison à Étage · Max_Adis</div>
                 </div>
             </a>
@@ -2526,12 +2527,13 @@
             });
         }
 
-        // Simulateur Live : Maison Intelligente à Étage (2 Relais + Minuteries 10s)
+        // Simulateur Live : Maison Intelligente à Étage (2 Relais Indépendants + Minuteries 10s)
         let relay1On = false; // RDC (Pin 2)
         let relay2On = false; // Étage (Pin 3)
-        let timerInterval = null;
-        let activeTimerFloor = 0;
-        let remainingMs = 0;
+        let timerInterval1 = null;
+        let timerInterval2 = null;
+        let remainingMs1 = 0;
+        let remainingMs2 = 0;
 
         const cardFloor1 = document.getElementById('cardFloor1');
         const cardFloor2 = document.getElementById('cardFloor2');
@@ -2546,14 +2548,22 @@
         const houseStatusBadge = document.getElementById('houseStatusBadge');
         const telemetryFeed = document.getElementById('telemetryFeed');
 
-        function clearActiveTimer() {
-            if (timerInterval) {
-                clearInterval(timerInterval);
-                timerInterval = null;
+        function clearFloorTimer(floor) {
+            if (floor === 1) {
+                if (timerInterval1) {
+                    clearInterval(timerInterval1);
+                    timerInterval1 = null;
+                }
+                remainingMs1 = 0;
+                timerWrap1.style.display = 'none';
+            } else if (floor === 2) {
+                if (timerInterval2) {
+                    clearInterval(timerInterval2);
+                    timerInterval2 = null;
+                }
+                remainingMs2 = 0;
+                timerWrap2.style.display = 'none';
             }
-            activeTimerFloor = 0;
-            timerWrap1.style.display = 'none';
-            timerWrap2.style.display = 'none';
         }
 
         function updateHouseUI(lastChar) {
@@ -2561,9 +2571,9 @@
             if (relay1On) {
                 cardFloor1.classList.add('lit');
                 svgWindowFloor1.classList.add('lit-room');
-                if (activeTimerFloor === 1) {
+                if (timerInterval1 !== null) {
                     badgeFloor1.className = 'floor-badge timer';
-                    badgeFloor1.textContent = `MINUTERIE (${(remainingMs / 1000).toFixed(1)}s)`;
+                    badgeFloor1.textContent = `MINUTERIE (${(remainingMs1 / 1000).toFixed(1)}s)`;
                 } else {
                     badgeFloor1.className = 'floor-badge on';
                     badgeFloor1.textContent = 'ALLUMÉ (LOW)';
@@ -2579,9 +2589,9 @@
             if (relay2On) {
                 cardFloor2.classList.add('lit');
                 svgWindowFloor2.classList.add('lit-room');
-                if (activeTimerFloor === 2) {
+                if (timerInterval2 !== null) {
                     badgeFloor2.className = 'floor-badge timer';
-                    badgeFloor2.textContent = `MINUTERIE (${(remainingMs / 1000).toFixed(1)}s)`;
+                    badgeFloor2.textContent = `MINUTERIE (${(remainingMs2 / 1000).toFixed(1)}s)`;
                 } else {
                     badgeFloor2.className = 'floor-badge on';
                     badgeFloor2.textContent = 'ALLUMÉ (LOW)';
@@ -2594,19 +2604,32 @@
             }
 
             // Badge global maison
-            if (relay1On && !relay2On) {
+            if (relay1On && relay2On) {
                 houseStatusBadge.style.background = '#fef08a';
                 houseStatusBadge.style.color = '#854d0e';
                 houseStatusBadge.style.borderColor = '#facc15';
-                houseStatusBadge.textContent = activeTimerFloor === 1
-                    ? `RDC Allumé — Extinction auto dans ${(remainingMs / 1000).toFixed(1)}s`
+                if (timerInterval1 !== null && timerInterval2 !== null) {
+                    houseStatusBadge.textContent = `2 Niveaux Allumés — RDC (${(remainingMs1 / 1000).toFixed(1)}s) · Étage (${(remainingMs2 / 1000).toFixed(1)}s)`;
+                } else if (timerInterval1 !== null) {
+                    houseStatusBadge.textContent = `2 Niveaux Allumés — RDC Minuterie (${(remainingMs1 / 1000).toFixed(1)}s)`;
+                } else if (timerInterval2 !== null) {
+                    houseStatusBadge.textContent = `2 Niveaux Allumés — Étage Minuterie (${(remainingMs2 / 1000).toFixed(1)}s)`;
+                } else {
+                    houseStatusBadge.textContent = '2 Niveaux Allumés (RDC & Étage ON)';
+                }
+            } else if (relay1On) {
+                houseStatusBadge.style.background = '#fef08a';
+                houseStatusBadge.style.color = '#854d0e';
+                houseStatusBadge.style.borderColor = '#facc15';
+                houseStatusBadge.textContent = timerInterval1 !== null
+                    ? `RDC Allumé — Extinction auto dans ${(remainingMs1 / 1000).toFixed(1)}s`
                     : 'Rez-de-Chaussée Allumé (Lampe 1 ON)';
-            } else if (!relay1On && relay2On) {
+            } else if (relay2On) {
                 houseStatusBadge.style.background = '#fef08a';
                 houseStatusBadge.style.color = '#854d0e';
                 houseStatusBadge.style.borderColor = '#facc15';
-                houseStatusBadge.textContent = activeTimerFloor === 2
-                    ? `Étage Allumé — Extinction auto dans ${(remainingMs / 1000).toFixed(1)}s`
+                houseStatusBadge.textContent = timerInterval2 !== null
+                    ? `Étage Allumé — Extinction auto dans ${(remainingMs2 / 1000).toFixed(1)}s`
                     : 'Étage Supérieur Allumé (Lampe 2 ON)';
             } else {
                 houseStatusBadge.style.background = '#1e293b';
@@ -2621,56 +2644,68 @@
         }
 
         function startTimerCountdown(floor, cmdChar) {
-            clearActiveTimer();
-            activeTimerFloor = floor;
-            remainingMs = 10000;
+            clearFloorTimer(floor);
             const wrap = floor === 1 ? timerWrap1 : timerWrap2;
             const fill = floor === 1 ? timerFill1 : timerFill2;
             wrap.style.display = 'block';
             fill.style.width = '100%';
 
+            if (floor === 1) {
+                remainingMs1 = 10000;
+                timerInterval1 = setInterval(() => {
+                    remainingMs1 -= 200;
+                    const pct = Math.max(0, (remainingMs1 / 10000) * 100);
+                    fill.style.width = pct + '%';
+
+                    if (remainingMs1 <= 0) {
+                        clearFloorTimer(1);
+                        relay1On = false;
+                        updateHouseUI(cmdChar + ' [FIN 10s]');
+                    } else {
+                        updateHouseUI(cmdChar);
+                    }
+                }, 200);
+            } else {
+                remainingMs2 = 10000;
+                timerInterval2 = setInterval(() => {
+                    remainingMs2 -= 200;
+                    const pct = Math.max(0, (remainingMs2 / 10000) * 100);
+                    fill.style.width = pct + '%';
+
+                    if (remainingMs2 <= 0) {
+                        clearFloorTimer(2);
+                        relay2On = false;
+                        updateHouseUI(cmdChar + ' [FIN 10s]');
+                    } else {
+                        updateHouseUI(cmdChar);
+                    }
+                }, 200);
+            }
+
             updateHouseUI(cmdChar);
-
-            timerInterval = setInterval(() => {
-                remainingMs -= 200;
-                const pct = Math.max(0, (remainingMs / 10000) * 100);
-                fill.style.width = pct + '%';
-
-                if (remainingMs <= 0) {
-                    clearActiveTimer();
-                    relay1On = false;
-                    relay2On = false;
-                    updateHouseUI(cmdChar + ' [FIN 10s]');
-                } else {
-                    updateHouseUI(cmdChar);
-                }
-            }, 200);
         }
 
         function sendBtCommand(cmd) {
-            clearActiveTimer();
             if (cmd === 'A') {
+                clearFloorTimer(1);
                 relay1On = true;
-                relay2On = false;
                 updateHouseUI('A');
             } else if (cmd === 'B') {
+                clearFloorTimer(1);
                 relay1On = false;
-                relay2On = false;
                 updateHouseUI('B');
             } else if (cmd === 'C') {
-                relay1On = false;
+                clearFloorTimer(2);
                 relay2On = true;
                 updateHouseUI('C');
             } else if (cmd === 'D') {
-                relay1On = false;
+                clearFloorTimer(2);
                 relay2On = false;
                 updateHouseUI('D');
             } else if (cmd === 'T') {
                 relay1On = true;
-                relay2On = false;
                 startTimerCountdown(1, 'T');
             } else if (cmd === 'U') {
-                relay1On = false;
                 relay2On = true;
                 startTimerCountdown(2, 'U');
             }
